@@ -17,14 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-       
-    primarySwatch: Colors.blue
-    ,
-    fontFamily: 'Montserrat'
-      ),
-   
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Montserrat'),
     );
   }
 }
-
