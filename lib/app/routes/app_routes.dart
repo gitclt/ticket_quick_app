@@ -12,6 +12,7 @@ abstract class Routes {
   static const ROUTE = _Paths.ROUTE;
   static const REPORT = _Paths.REPORT;
   static const EXPENSES = _Paths.EXPENSES;
+  static const ENDSHIFT = _Paths.ENDSHIFT;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const ROUTE = '/route';
   static const REPORT = '/report';
   static const EXPENSES = '/expenses';
+  static const ENDSHIFT = '/endshift';
 }

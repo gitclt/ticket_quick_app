@@ -14,6 +14,7 @@ class ExpensesView extends GetView<ExpensesController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // ignore: prefer_const_constructors
       appBar: CommonAppBar(label: "ETIM Expenses"),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

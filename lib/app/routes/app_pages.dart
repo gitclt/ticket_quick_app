@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/endshift/bindings/endshift_binding.dart';
+import '../modules/endshift/views/endshift_view.dart';
 import '../modules/expenses/bindings/expenses_binding.dart';
 import '../modules/expenses/views/expenses_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -56,6 +58,11 @@ class AppPages {
       name: _Paths.EXPENSES,
       page: () => const ExpensesView(),
       binding: ExpensesBinding(),
+    ),
+    GetPage(
+      name: _Paths.ENDSHIFT,
+      page: () => const EndshiftView(),
+      binding: EndshiftBinding(),
     ),
   ];
 }
