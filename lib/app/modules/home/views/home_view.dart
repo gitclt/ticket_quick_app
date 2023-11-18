@@ -5,6 +5,7 @@ import 'package:ticket_quick_app/app/common_widgets/card/home_card.dart';
 
 import 'package:ticket_quick_app/app/common_widgets/card/home_header_card.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
+import 'package:ticket_quick_app/app/routes/app_pages.dart';
 import 'package:ticket_quick_app/constrains/space.dart';
 
 import '../controllers/home_controller.dart';
@@ -28,7 +29,7 @@ class HomeView extends GetView<HomeController> {
               children: [
                 blackText("Categories", 18, fontWeight: FontWeight.w600),
                 20.0.spaceY,
-                const Wrap(
+                Wrap(
                   alignment: WrapAlignment.center,
                   spacing: 10,
                   runSpacing: 15,
@@ -36,16 +37,19 @@ class HomeView extends GetView<HomeController> {
                     HomeCard(
                       path: "assets/image/svg/route.svg",
                       label: 'Route Details',
+                      onClick: () {
+                        Get.toNamed(Routes.ROUTE);
+                      },
                     ),
-                    HomeCard(
+                    const HomeCard(
                       path: "assets/image/svg/report.svg",
                       label: 'Report',
                     ),
-                    HomeCard(
+                    const HomeCard(
                       path: "assets/image/svg/rupee.svg",
                       label: 'Expenses',
                     ),
-                    HomeCard(
+                    const HomeCard(
                       path: "assets/image/svg/power.svg",
                       label: 'End Shift',
                     ),

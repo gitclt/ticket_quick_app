@@ -18,9 +18,14 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        onClick!();
-      },
+      onTap:
+          //   onClick!();
+          // },
+          onClick == null
+              ? null
+              : () {
+                  onClick!();
+                },
       child: Container(
         height: 100,
         width: 150,

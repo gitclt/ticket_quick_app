@@ -7,14 +7,16 @@ abstract class Routes {
   Routes._();
   static const SPLASH = _Paths.SPLASH;
   static const LOGIN = _Paths.LOGIN;
-    static const PROCEED = _Paths.PROCEED;
+  static const PROCEED = _Paths.PROCEED;
   static const HOME = _Paths.HOME;
+  static const ROUTE = _Paths.ROUTE;
 }
 
 abstract class _Paths {
   _Paths._();
   static const SPLASH = '/splash';
   static const LOGIN = '/login';
-  static const PROCEED= '/proceed';
+  static const PROCEED = '/proceed';
   static const HOME = '/home';
+  static const ROUTE = '/route';
 }
