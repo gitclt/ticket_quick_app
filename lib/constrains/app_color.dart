@@ -32,7 +32,7 @@ const tripcolor1 = LinearGradient(
 const mapColor = Color(0xFF033EB2);
 const redColor = Color(0xFFD80005);
 const red2Color = Color(0xFFB20002);
-const homeredColor = Color(0xFFE71C25);
+const homeHeadColor = Color(0xFFF1F1F1);
 const homeMenuColor = Color(0xFFD80005);
 const homeTargetTextColor = Color(0xFF407872);
 

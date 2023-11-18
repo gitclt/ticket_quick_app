@@ -24,7 +24,7 @@ class HomeCard extends StatelessWidget {
       child: Container(
         height: 100,
         width: 150,
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         decoration: BoxDecoration(
             color: const Color(0xffF1F9FF),
             borderRadius: BorderRadius.circular(8)),
