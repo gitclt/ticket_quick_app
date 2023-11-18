@@ -5,6 +5,8 @@ import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/login/views/procced.dart';
+import '../modules/report/bindings/report_binding.dart';
+import '../modules/report/views/report_view.dart';
 import '../modules/route/bindings/route_binding.dart';
 import '../modules/route/views/route_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
@@ -42,6 +44,11 @@ class AppPages {
       name: _Paths.ROUTE,
       page: () => const RouteView(),
       binding: RouteBinding(),
+    ),
+    GetPage(
+      name: _Paths.REPORT,
+      page: () => const ReportView(),
+      binding: ReportBinding(),
     ),
   ];
 }

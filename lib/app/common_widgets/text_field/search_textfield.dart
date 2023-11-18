@@ -70,6 +70,7 @@ class CommonSearchTextField extends StatelessWidget {
           // filled: true,
           isDense: true,
           hintStyle: const TextStyle(fontSize: 15, color: Colors.grey),
+          // ignore: prefer_const_constructors
           prefixIcon: Icon(Icons.search, size: 24),
           suffixIcon: textEditingController == null
               ? null

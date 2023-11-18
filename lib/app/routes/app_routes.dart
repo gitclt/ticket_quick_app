@@ -10,6 +10,7 @@ abstract class Routes {
   static const PROCEED = _Paths.PROCEED;
   static const HOME = _Paths.HOME;
   static const ROUTE = _Paths.ROUTE;
+  static const REPORT = _Paths.REPORT;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const PROCEED = '/proceed';
   static const HOME = '/home';
   static const ROUTE = '/route';
+  static const REPORT = '/report';
 }

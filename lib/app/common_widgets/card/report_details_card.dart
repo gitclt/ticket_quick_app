@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_quick_app/app/common_widgets/svg_widget/svg_icon.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/constrains/space.dart';
 
-class RouteDetailsCard extends StatelessWidget {
-  final String tittle, subtittle;
-  const RouteDetailsCard({
-    super.key, required this.tittle, required this.subtittle,
+class ReportDetailsCard extends StatelessWidget {
+  final String tittle;
+  const ReportDetailsCard({
+    super.key,
+    required this.tittle,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(3),
+      padding: const EdgeInsets.all(2),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
         decoration: BoxDecoration(
@@ -30,17 +32,11 @@ class RouteDetailsCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                blackText(tittle, 16,
-                    fontWeight: FontWeight.w500),
+                svgWidget("assets/image/svg/report_card.svg"),
+                20.0.spaceX,
+                blackText(tittle, 16, fontWeight: FontWeight.w500),
               ],
             ),
-            5.0.spaceY,
-            Row(
-              children: [
-                blackText(subtittle, 14,
-                    fontWeight: FontWeight.w400)
-              ],
-            )
           ],
         ),
       ),

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/common_widgets/appbar/common_appbar.dart';
 import 'package:ticket_quick_app/app/common_widgets/card/route_details_card.dart';
 import 'package:ticket_quick_app/app/common_widgets/text_field/search_textfield.dart';
-import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/constrains/space.dart';
 
 import '../controllers/route_controller.dart';
