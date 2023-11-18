@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ticket_quick_app/app/common_widgets/button/login_button.dart';
 import 'package:ticket_quick_app/app/common_widgets/svg_widget/svg_icon.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
-import 'package:ticket_quick_app/constrains/app_color.dart';
 import 'package:ticket_quick_app/constrains/space.dart';
 
 class HeaderCard extends StatelessWidget {
@@ -13,8 +12,8 @@ class HeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      decoration: const BoxDecoration(color: Color(0xFFF4F8F9)),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      decoration: const BoxDecoration(color: Color(0xFFF1F1F1)),
       child: Row(
         children: [
           svgWidget(
