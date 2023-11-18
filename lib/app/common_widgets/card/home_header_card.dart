@@ -12,8 +12,8 @@ class HeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-      decoration: BoxDecoration(color: Color(0xFFF8F8F8)),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+      decoration: const BoxDecoration(color: Color(0xFFF8F8F8)),
       child: Row(
         children: [
           svgWidget(
@@ -29,7 +29,7 @@ class HeaderCard extends StatelessWidget {
               blackText('Vadakara - Perambra', 10),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           SizedBox(
             width: 120,
             height: 40,
