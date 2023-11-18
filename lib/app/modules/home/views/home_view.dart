@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/common_widgets/card/home_card.dart';
-
 import 'package:ticket_quick_app/app/common_widgets/card/home_header_card.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/app/routes/app_pages.dart';
@@ -23,7 +21,7 @@ class HomeView extends GetView<HomeController> {
           const HeaderCard(),
           25.0.spaceY,
           Padding(
-            padding: const EdgeInsets.only(left: 25, right: 10),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,7 +29,7 @@ class HomeView extends GetView<HomeController> {
                 20.0.spaceY,
                 Wrap(
                   alignment: WrapAlignment.center,
-                  spacing: 10,
+                  spacing: 15,
                   runSpacing: 15,
                   children: [
                     HomeCard(

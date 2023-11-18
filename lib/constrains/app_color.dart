@@ -33,6 +33,7 @@ const mapColor = Color(0xFF033EB2);
 const redColor = Color(0xFFD80005);
 const red2Color = Color(0xFFB20002);
 const homeHeadColor = Color(0xFFF1F1F1);
+const homeCatCardColor = Color(0xFFF1F9FF);
 const homeMenuColor = Color(0xFFD80005);
 const homeTargetTextColor = Color(0xFF407872);
 
