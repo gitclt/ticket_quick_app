@@ -39,7 +39,7 @@ class HomeCard extends StatelessWidget {
                 blackText(label, 14, fontWeight: FontWeight.w500)
               ],
             ),
-            5.0.spaceX,
+            18.0.spaceX,
             const Icon(Icons.navigate_next_outlined)
           ],
         ),

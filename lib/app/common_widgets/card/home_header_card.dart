@@ -12,8 +12,8 @@ class HeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-      decoration: const BoxDecoration(color: Color(0xFFF8F8F8)),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+      decoration: const BoxDecoration(color: Color(0xFFF4F8F9)),
       child: Row(
         children: [
           svgWidget(

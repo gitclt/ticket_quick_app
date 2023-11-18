@@ -22,13 +22,14 @@ class HomeView extends GetView<HomeController> {
           const HeaderCard(),
           25.0.spaceY,
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 25, right: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 blackText("Categories", 18, fontWeight: FontWeight.w600),
                 20.0.spaceY,
                 const Wrap(
+                  alignment: WrapAlignment.center,
                   spacing: 10,
                   runSpacing: 15,
                   children: [
