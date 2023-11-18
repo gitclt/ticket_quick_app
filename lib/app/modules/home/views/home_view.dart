@@ -44,13 +44,16 @@ class HomeView extends GetView<HomeController> {
                     HomeCard(
                       path: "assets/image/svg/report.svg",
                       label: 'Report',
-                       onClick: () {
+                      onClick: () {
                         Get.toNamed(Routes.REPORT);
                       },
                     ),
-                    const HomeCard(
+                    HomeCard(
                       path: "assets/image/svg/rupee.svg",
                       label: 'Expenses',
+                      onClick: () {
+                        Get.toNamed(Routes.EXPENSES);
+                      },
                     ),
                     const HomeCard(
                       path: "assets/image/svg/power.svg",

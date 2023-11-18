@@ -11,6 +11,7 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const ROUTE = _Paths.ROUTE;
   static const REPORT = _Paths.REPORT;
+  static const EXPENSES = _Paths.EXPENSES;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const HOME = '/home';
   static const ROUTE = '/route';
   static const REPORT = '/report';
+  static const EXPENSES = '/expenses';
 }

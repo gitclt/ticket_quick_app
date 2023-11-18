@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/expenses/bindings/expenses_binding.dart';
+import '../modules/expenses/views/expenses_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -49,6 +51,11 @@ class AppPages {
       name: _Paths.REPORT,
       page: () => const ReportView(),
       binding: ReportBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXPENSES,
+      page: () => const ExpensesView(),
+      binding: ExpensesBinding(),
     ),
   ];
 }
