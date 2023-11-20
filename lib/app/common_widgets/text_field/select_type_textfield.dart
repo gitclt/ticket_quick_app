@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class CommonSearchTextField extends StatelessWidget {
+class ItemSelectTextField extends StatelessWidget {
   final String hintText;
   final Function? onChanged;
   final Function? onPressed;
-
+  final FormFieldValidator? validator;
   final bool autofocus;
   final Function? onTap;
+  final double? borderRadius;
   final TextEditingController? textEditingController;
   final bool isEnabled;
   final bool? readOnly;
-  const CommonSearchTextField({
+  const ItemSelectTextField({
     Key? key,
     this.onChanged,
     this.onPressed,
@@ -20,6 +21,8 @@ class CommonSearchTextField extends StatelessWidget {
     this.onTap,
     this.isEnabled = true,
     this.readOnly = false,
+    this.validator,
+    this.borderRadius = 15.0,
   }) : super(key: key);
 
   @override
@@ -28,7 +31,8 @@ class CommonSearchTextField extends StatelessWidget {
       style: const TextStyle(fontSize: 15, color: Colors.black),
       controller: textEditingController,
       autofocus: autofocus,
-      // readOnly: readOnly!,
+      readOnly: readOnly!,
+      validator: validator,
       enabled: isEnabled,
       //  textAlign: isCenterText == null ? TextAlign.start : TextAlign.center,
       onTap: onTap == null
@@ -45,48 +49,42 @@ class CommonSearchTextField extends StatelessWidget {
           hintText: hintText,
           border: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.grey),
-            borderRadius: BorderRadius.circular(6.0),
+            borderRadius: BorderRadius.circular(15.0),
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               color: Color(0xfff3f3f3),
             ),
-            borderRadius: BorderRadius.circular(6.0),
+            borderRadius: BorderRadius.circular(borderRadius!),
           ),
           disabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               color: Color(0xfff3f3f3),
             ),
-            borderRadius: BorderRadius.circular(6.0),
+            borderRadius: BorderRadius.circular(15.0),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               color: Color(0xfff3f3f3),
             ),
-            borderRadius: BorderRadius.circular(6.0),
+            borderRadius: BorderRadius.circular(15.0),
           ),
-          fillColor: const Color(0xffEEF2F9),
+          fillColor: const Color(0xffEEF2F6),
           filled: true,
           // filled: true,
           isDense: true,
           hintStyle: const TextStyle(fontSize: 15, color: Colors.grey),
-          // ignore: prefer_const_constructors
-          prefixIcon: Icon(Icons.search, size: 24),
-          suffixIcon: textEditingController == null
-              ? null
-              : textEditingController!.text.isNotEmpty
-                  ? IconButton(
-                      onPressed: onPressed == null
-                          ? null
-                          : () {
-                              onPressed!();
-                            },
-                      icon: const Icon(
-                        Icons.cancel,
-                        color: Colors.black,
-                        size: 25,
-                      ))
-                  : null),
+          suffixIcon: IconButton(
+              onPressed: onPressed == null
+                  ? null
+                  : () {
+                      onPressed!();
+                    },
+              icon: const Icon(
+                Icons.arrow_drop_down,
+                color: Colors.black,
+                size: 25,
+              ))),
     );
   }
 }

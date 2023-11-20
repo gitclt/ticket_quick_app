@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ExpensesController extends GetxController {
-TextEditingController optioncontroller = TextEditingController();
+  TextEditingController typeController = TextEditingController();
 
-final List<String> option = [
-    'option',
-    'option1',
-    'option2',
-    'option3',
-
+  final List<String> options = [
+    'Driver Salary',
+    'Conductor Salary',
+    'Association Fees',
+    'Fuel',
+    'Helper',
+    'Maintenance',
+    'Operator’s Take',
+    'Cleaning Expenses',
+    'Penalty Paid',
+    'Others'
   ];
 }

@@ -13,6 +13,7 @@ abstract class Routes {
   static const REPORT = _Paths.REPORT;
   static const EXPENSES = _Paths.EXPENSES;
   static const ENDSHIFT = _Paths.ENDSHIFT;
+  static const PAY_BILL = _Paths.PAY_BILL;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const REPORT = '/report';
   static const EXPENSES = '/expenses';
   static const ENDSHIFT = '/endshift';
+  static const PAY_BILL = '/pay-bill';
 }

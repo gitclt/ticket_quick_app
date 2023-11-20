@@ -17,34 +17,34 @@ class BottomWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height * 0.13,
+    return SizedBox(
+      width: double.infinity,
+      height: MediaQuery.of(context).size.height * 0.145,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
                     blackText('Waybill', 12),
-                    8.0.spaceY,
+                    10.0.spaceY,
                     blackText(waybill, 12)
                   ],
                 ),
                 Column(
                   children: [
                     blackText('Cond Id', 12),
-                    8.0.spaceY,
+                    10.0.spaceY,
                     blackText(condId, 12)
                   ],
                 ),
                 Column(
                   children: [
                     blackText('ETIM Name', 12),
-                    8.0.spaceY,
+                    10.0.spaceY,
                     blackText(etimName, 12)
                   ],
                 )

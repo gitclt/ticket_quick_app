@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/common_widgets/appbar/common_appbar.dart';
+import 'package:ticket_quick_app/app/common_widgets/bottom_widget/home_bottom_widget.dart';
 import 'package:ticket_quick_app/app/common_widgets/card/report_details_card.dart';
 
 import '../controllers/report_controller.dart';
@@ -15,14 +15,22 @@ class ReportView extends GetView<ReportController> {
       body: Column(children: [
         Expanded(
             child: ListView.builder(
-                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   return const ReportDetailsCard(
                     tittle: 'New Auditor Report',
+                    path: "assets/image/svg/report_card.svg",
                   );
                 }))
       ]),
+      bottomNavigationBar: const BottomWidget(
+        waybill: '10909345',
+        condId: 'VK6939',
+        etimName: '860679053421699',
+        busNo: 'KL13T6939',
+      ),
     );
   }
 }

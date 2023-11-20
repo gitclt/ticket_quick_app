@@ -14,8 +14,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: 
-      const BottomWidget(
+      bottomNavigationBar: const BottomWidget(
         waybill: '10909345',
         condId: 'VK6939',
         etimName: '860679053421699',
@@ -63,9 +62,12 @@ class HomeView extends GetView<HomeController> {
                           Get.toNamed(Routes.EXPENSES);
                         },
                       ),
-                      const HomeCard(
+                      HomeCard(
                         path: "assets/image/svg/power.svg",
                         label: 'End Shift',
+                        onClick: () {
+                          Get.toNamed(Routes.ENDSHIFT);
+                        },
                       ),
                     ],
                   ),

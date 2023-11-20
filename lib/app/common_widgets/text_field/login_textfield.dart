@@ -4,6 +4,7 @@ class LoginTextField extends StatelessWidget {
   final String hintText;
   final bool? isEnable;
   final FormFieldValidator? validator;
+
   // final IconData? prefixIcon;
   final TextInputType? keytype;
   final Widget? prefixIcon;
@@ -12,21 +13,21 @@ class LoginTextField extends StatelessWidget {
   final Function? suffixIconClick;
   final TextEditingController? textEditingController;
   final IconData? suffixIcon;
-  const LoginTextField(
-      {Key? key,
-      this.isEnable,
-      this.textInputType,
-      this.suffixIconClick,
+  const LoginTextField({
+    Key? key,
+    this.isEnable,
+    this.textInputType,
+    this.suffixIconClick,
 
-      // this.prefixIcon,
-      this.prefixIcon,
-      required this.hintText,
-      this.obscureText = false,
-      this.textEditingController,
-      this.validator,
-      this.suffixIcon,
-      this.keytype})
-      : super(
+    // this.prefixIcon,
+    this.prefixIcon,
+    required this.hintText,
+    this.obscureText = false,
+    this.textEditingController,
+    this.validator,
+    this.suffixIcon,
+    this.keytype,
+  }) : super(
           key: key,
         );
 
@@ -49,7 +50,7 @@ class LoginTextField extends StatelessWidget {
         //   LengthLimitingTextInputFormatter(10),
         // ],
         decoration: InputDecoration(
-          fillColor: const Color(0xFFF3F3F3),
+          fillColor: const Color(0xFFEEF2F6),
           // contentPadding: EdgeInsets.symmetric(horizontal: 15),
           hintStyle: const TextStyle(
             color: Color(0xffB2B2B2),

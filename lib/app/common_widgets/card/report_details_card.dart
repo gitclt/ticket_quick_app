@@ -5,9 +5,11 @@ import 'package:ticket_quick_app/constrains/space.dart';
 
 class ReportDetailsCard extends StatelessWidget {
   final String tittle;
+  final String path;
   const ReportDetailsCard({
     super.key,
     required this.tittle,
+    required this.path,
   });
 
   @override
@@ -32,7 +34,7 @@ class ReportDetailsCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                svgWidget("assets/image/svg/report_card.svg"),
+                svgWidget(path),
                 20.0.spaceX,
                 blackText(tittle, 16, fontWeight: FontWeight.w500),
               ],
