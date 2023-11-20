@@ -13,7 +13,8 @@ class LoginTextField extends StatelessWidget {
   final Function? suffixIconClick;
   final TextEditingController? textEditingController;
   final IconData? suffixIcon;
-  const LoginTextField({
+  const 
+  LoginTextField({
     Key? key,
     this.isEnable,
     this.textInputType,

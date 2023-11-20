@@ -15,27 +15,36 @@ class RouteView extends GetView<RouteController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CommonAppBar(label: "Route Details"),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(
-          children: [
-            const CommonSearchTextField(
+      body:
+          //  Padding(
+          //   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          //   child:
+          Column(
+        children: [
+          10.0.spaceY,
+          const Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 15,
+            ),
+            child: CommonSearchTextField(
               hintText: 'Search route',
             ),
-            10.0.spaceY,
-            Expanded(
-                child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (context, index) {
-                      return RouteDetailsCard(
-                          onTap: () {
-                            Get.toNamed(Routes.PAY_BILL);
-                          },
-                          tittle: 'Perambra - Vadakara Via Payyoli DO',
-                          subtittle: 'Vadakara - Perambra');
-                    }))
-          ],
-        ),
+          ),
+          5.0.spaceY,
+          Expanded(
+              child: ListView.builder(
+                  // padding: const EdgeInsets.symmetric(horizontal: 6),
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return RouteDetailsCard(
+                        onTap: () {
+                          Get.toNamed(Routes.PAY_BILL);
+                        },
+                        tittle: 'Perambra - Vadakara Via Payyoli DO',
+                        subtittle: 'Vadakara - Perambra');
+                  }))
+        ],
+        // ),
       ),
       bottomNavigationBar: const BottomWidget(
         waybill: '10909345',
