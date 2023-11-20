@@ -6,7 +6,8 @@ import 'package:ticket_quick_app/constrains/app_color.dart';
 class ExpenseTypePopup extends StatefulWidget {
   final int itemCount;
   final List<String> title;
-  const ExpenseTypePopup({super.key, required this.itemCount, required this.title});
+  const ExpenseTypePopup(
+      {super.key, required this.itemCount, required this.title});
 
   @override
   State<ExpenseTypePopup> createState() => _ExpenseTypePopupState();
