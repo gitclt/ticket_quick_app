@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ticket_quick_app/app/common_widgets/popup/common_init.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/constrains/app_color.dart';
 
@@ -15,23 +16,21 @@ class ExpenseTypePopup extends StatefulWidget {
 
 class _ExpenseTypePopupState extends State<ExpenseTypePopup>
     with SingleTickerProviderStateMixin {
-  AnimationController? controller;
-  Animation<double>? scaleAnimation;
+  late MyAnimationController animationController;
+  // AnimationController? controller;
+  // Animation<double>? scaleAnimation;
 
   @override
   void initState() {
     super.initState();
 
-    controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500));
-    scaleAnimation =
-        CurvedAnimation(parent: controller!, curve: Curves.elasticInOut);
+    animationController = MyAnimationController(this);
+  }
 
-    controller!.addListener(() {
-      setState(() {});
-    });
-
-    controller!.forward();
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -41,7 +40,7 @@ class _ExpenseTypePopupState extends State<ExpenseTypePopup>
       child: Material(
           color: Colors.transparent,
           child: ScaleTransition(
-            scale: scaleAnimation!,
+            scale: animationController.scaleAnimation!,
             child: Stack(children: [
               Padding(
                 padding: EdgeInsets.only(
