@@ -66,7 +66,7 @@ class HomeView extends GetView<HomeController> {
                       HomeCard(
                         path: "assets/image/svg/power.svg",
                         label: 'End Shift',
-                        onClick: () {
+                        onClick: () async {
                           Get.toNamed(Routes.ENDSHIFT);
                         },
                       ),

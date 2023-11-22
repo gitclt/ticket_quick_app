@@ -34,8 +34,11 @@ const redColor = Color(0xFFD80005);
 const red2Color = Color(0xFFB20002);
 const homeHeadColor = Color(0xFFF1F1F1);
 const homeCatCardColor = Color(0xFFF1F9FF);
+const lightBlueColor = Color(0xFFEEF2F9);
 const homeMenuColor = Color(0xFFD80005);
 const homeTargetTextColor = Color(0xFF407872);
+const greenColor = Color(0xFF03A800);
+const divColor = Color(0xFFCECECE);
 
 const reportBgColor = Color(0xFFFBE6E6);
 const scaffoldBgColor = Color(0xFFF3F3F3);

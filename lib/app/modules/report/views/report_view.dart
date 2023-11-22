@@ -19,9 +19,9 @@ class ReportView extends GetView<ReportController> {
                     const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                 itemCount: 3,
                 itemBuilder: (context, index) {
-                  return const ReportDetailsCard(
+                  return ReportDetailsCard(
                     tittle: 'New Auditor Report',
-                    path: "assets/image/svg/report_card.svg",
+                    path: "assets/image/svg/report_card.svg", onTap: (){},
                   );
                 }))
       ]),
