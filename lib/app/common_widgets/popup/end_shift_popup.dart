@@ -3,14 +3,12 @@ import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/common_widgets/popup/common_init.dart';
 import 'package:ticket_quick_app/app/common_widgets/text_field/underline_textfield.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
-import 'package:ticket_quick_app/app/models/end_shift_model.dart';
+import 'package:ticket_quick_app/app/modules/endshift/controllers/endshift_controller.dart';
 import 'package:ticket_quick_app/constrains/app_color.dart';
+import 'package:ticket_quick_app/constrains/services/sql_helper.dart';
 
 class EndShiftExpenseDialog extends StatefulWidget {
-  final List<String> title;
-  final VoidCallback? onEnteredValue;
-  const EndShiftExpenseDialog(
-      {super.key, required this.title, this.onEnteredValue});
+  const EndShiftExpenseDialog({super.key});
 
   @override
   State<EndShiftExpenseDialog> createState() => _EndShiftExpenseDialogState();
@@ -19,8 +17,7 @@ class EndShiftExpenseDialog extends StatefulWidget {
 class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
     with SingleTickerProviderStateMixin {
   late MyAnimationController animationController;
-
-  List<EndShiftModel> enteredValues = [];
+  EndshiftController endshiftController = Get.find();
 
   @override
   void initState() {
@@ -79,8 +76,21 @@ class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600),
                             TextButton(
-                                onPressed: () {
-                                  Get.back(result: getEnteredValues());
+                                onPressed: () async {
+                                  List<Map<String, dynamic>> result = [];
+                                  for (var model
+                                      in endshiftController.enteredValues) {
+                                    result.add({
+                                      'id': model.id,
+                                      'text': model.text,
+                                      'value': model.value,
+                                    });
+
+                                    await SQLHelper.createItem(
+                                        model.id, model.text, model.value);
+                                  }
+
+                                  Get.back(result: result);
                                 },
                                 child: greyText('Save', 16,
                                     color: Colors.white,
@@ -96,21 +106,26 @@ class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
                           runSpacing: 15,
                           alignment: WrapAlignment.spaceBetween,
                           //  runAlignment: WrapAlignment.center,
-                          children: List.generate(widget.title.length, (index) {
+                          children: List.generate(
+                              endshiftController.enteredValues.length, (index) {
                             return SizedBox(
                               width: size.width * 0.40,
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  blackText(widget.title[index], 15,
+                                  blackText(
+                                      endshiftController
+                                          .enteredValues[index].text,
+                                      15,
                                       fontWeight: FontWeight.w500),
                                   SizedBox(
                                     height: size.height * 0.05,
                                     child: UnderlineTextField(
                                       hint: '0',
                                       onChanged: (value) {
-                                        updateEnteredValue(value);
+                                        endshiftController
+                                            .enteredValues[index].value = value;
                                       },
                                     ),
                                   )
@@ -125,11 +140,5 @@ class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
             ]),
           )),
     );
-  }
-
-  void updateEnteredValue(value) {}
-
-  List<EndShiftModel> getEnteredValues() {
-    return enteredValues;
   }
 }

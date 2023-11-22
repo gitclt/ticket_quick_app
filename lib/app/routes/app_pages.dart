@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:ticket_quick_app/app/modules/endshift/views/shift_report.dart';
 
 import '../modules/endshift/bindings/endshift_binding.dart';
 import '../modules/endshift/views/endshift_view.dart';
@@ -70,6 +71,11 @@ class AppPages {
       name: _Paths.PAY_BILL,
       page: () => const PayBillView(),
       binding: PayBillBinding(),
+    ),
+    GetPage(
+      name: _Paths.SHIFT_REPORT,
+      page: () => const ShiftReportView(),
+      binding: EndshiftBinding(),
     ),
   ];
 }

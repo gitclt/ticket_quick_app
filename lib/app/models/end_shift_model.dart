@@ -1,6 +1,7 @@
 class EndShiftModel {
-  final String text;
-  final String value;
+  String id;
+  String text;
+  String value;
 
-  EndShiftModel({required this.text, required this.value});
+  EndShiftModel({required this.id, required this.text, required this.value});
 }
