@@ -44,7 +44,8 @@ class HomeView extends GetView<HomeController> {
                       HomeCard(
                         path: "assets/image/svg/route.svg",
                         label: 'Route Details',
-                        onClick: () {
+                        onClick: () async {
+                     
                           Get.toNamed(Routes.ROUTE);
                         },
                       ),
