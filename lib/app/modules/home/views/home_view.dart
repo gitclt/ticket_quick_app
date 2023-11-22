@@ -15,10 +15,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: const BottomWidget(
-        waybill: '10909345',
-        condId: 'VK6939',
-        etimName: '860679053421699',
-        busNo: 'KL13T6939',
+    
       ),
       body: SingleChildScrollView(
         child: Padding(

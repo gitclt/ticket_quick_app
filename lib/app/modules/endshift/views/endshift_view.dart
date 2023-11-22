@@ -39,10 +39,7 @@ class EndshiftView extends GetView<EndshiftController> {
           ]),
         ),
         bottomNavigationBar: const BottomWidget(
-          waybill: '10909345',
-          condId: 'VK6939',
-          etimName: '860679053421699',
-          busNo: 'KL13T6939',
+      
         ));
   }
 }
