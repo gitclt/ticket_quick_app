@@ -50,8 +50,6 @@ class EndshiftView extends GetView<EndshiftController> {
             ),
           ]),
         ),
-        bottomNavigationBar: const BottomWidget(
-      
-        ));
+        bottomNavigationBar: const BottomWidget());
   }
 }

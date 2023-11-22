@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/models/end_shift_model.dart';
-import 'package:ticket_quick_app/constrains/services/sql_helper.dart';
 
 class EndshiftController extends GetxController {
   final enteredValues = <EndShiftModel>[];
