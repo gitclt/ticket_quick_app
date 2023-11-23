@@ -14,6 +14,7 @@ abstract class Routes {
   static const EXPENSES = _Paths.EXPENSES;
   static const ENDSHIFT = _Paths.ENDSHIFT;
   static const PAY_BILL = _Paths.PAY_BILL;
+  static const SHIFT_REPORT = _Paths.SHIFT_REPORT;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const EXPENSES = '/expenses';
   static const ENDSHIFT = '/endshift';
   static const PAY_BILL = '/pay-bill';
+  static const SHIFT_REPORT = '/shift-report';
 }
