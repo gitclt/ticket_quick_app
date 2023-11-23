@@ -18,8 +18,8 @@ class UnderlineTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      maxLines: 1,
-     onChanged: onChanged == null
+      enabled: true,
+      onChanged: onChanged == null
           ? null
           : (String? value) {
               onChanged!(value);

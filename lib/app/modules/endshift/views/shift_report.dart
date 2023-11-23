@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ticket_quick_app/app/common_widgets/appbar/common_appbar.dart';
 import 'package:ticket_quick_app/app/modules/endshift/controllers/endshift_controller.dart';
 
 class ShiftReportView extends GetView<EndshiftController> {
@@ -8,6 +9,7 @@ class ShiftReportView extends GetView<EndshiftController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const CommonAppBar(label: 'Shift Report'),
       body: Obx(
         () => controller.isLoading.value
             ? const Center(

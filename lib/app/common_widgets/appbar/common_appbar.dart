@@ -11,7 +11,6 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-    
       elevation: 0.0,
       flexibleSpace: Container(
         decoration: const BoxDecoration(color: primaryColor),
@@ -21,7 +20,8 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
           onTap: () {
             Get.back();
           },
-          child: svgWidget('assets/image/svg/arrow_back.svg')),
+          child: svgWidget('assets/image/svg/arrow_back.svg',
+              color: Colors.white)),
       title: Text(
         label,
         style: const TextStyle(fontSize: 18, color: Colors.white),

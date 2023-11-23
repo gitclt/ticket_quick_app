@@ -10,7 +10,7 @@ import 'package:ticket_quick_app/constrains/services/sql_helper.dart';
 import '../controllers/endshift_controller.dart';
 
 class EndshiftView extends GetView<EndshiftController> {
-  const EndshiftView({Key? key}) : super(key: key);
+  const EndshiftView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +33,11 @@ class EndshiftView extends GetView<EndshiftController> {
               tittle: 'Sync',
               path: "assets/image/svg/sync.svg",
               onTap: () async {
-                SQLHelper.deleteDatabaseFile();
+               // SQLHelper.deleteDatabaseFile();
                 dynamic result = await showDialog(
                     context: context,
                     builder: (_) {
+                      // return const ShiftPopup();
                       return const EndShiftExpenseDialog();
                     });
                 if (result != null) {
