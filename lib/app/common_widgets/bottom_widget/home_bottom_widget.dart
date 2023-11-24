@@ -76,11 +76,10 @@
 
 import 'dart:async';
 
+import 'package:battery_plus/battery_plus.dart';
 import 'package:flutter/material.dart';
-
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/constrains/space.dart';
-import 'package:battery_plus/battery_plus.dart';
 
 class BottomWidget extends StatefulWidget {
   const BottomWidget({
@@ -115,9 +114,11 @@ class _BottomWidgetState extends State<BottomWidget> {
 
   Future<void> _getBatteryLevel() async {
     final batteryLevel = await battery.batteryLevel;
-    setState(() {
-      _batteryLevel = batteryLevel;
-    });
+    if (mounted) {
+      setState(() {
+        _batteryLevel = batteryLevel;
+      });
+    }
 
     _batteryStreamController.add(_batteryLevel);
   }
@@ -140,7 +141,7 @@ class _BottomWidgetState extends State<BottomWidget> {
 
   @override
   void dispose() {
-    _batteryStreamController.close();
+    //  _batteryStreamController.close();
     super.dispose();
   }
 

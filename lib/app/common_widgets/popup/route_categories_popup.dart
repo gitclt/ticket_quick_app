@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ticket_quick_app/app/common_widgets/button/login_button.dart';
-import 'package:ticket_quick_app/app/common_widgets/divider.dart';
+import 'package:ticket_quick_app/app/common_widgets/divider/divider.dart';
 import 'package:ticket_quick_app/app/common_widgets/texts/color_text.dart';
 import 'package:ticket_quick_app/app/modules/pay_bill/views/pay_bill_view.dart';
 import 'package:ticket_quick_app/constrains/app_color.dart';

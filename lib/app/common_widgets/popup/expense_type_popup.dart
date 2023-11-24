@@ -62,9 +62,23 @@ class _ExpenseTypePopupState extends State<ExpenseTypePopup>
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20))),
-                        child: Center(
-                          child: greyText('Select Expense Type', 18,
-                              color: Colors.white),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: greyText('Select Expense Type', 18,
+                                    color: Colors.white),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Get.back();
+                              },
+                              icon: const Icon(Icons.close),
+                              color: Colors.white,
+                            )
+                          ],
                         )),
                     Expanded(
                         child: ListView.builder(
@@ -79,7 +93,7 @@ class _ExpenseTypePopupState extends State<ExpenseTypePopup>
                             }))
                   ]),
                 ),
-              )
+              ),
             ]),
           )),
     );
