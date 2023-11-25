@@ -22,7 +22,7 @@ class EndshiftController extends GetxController {
       EndShiftModel(id: '9', text: 'Penalty Paid', value: ''),
       EndShiftModel(id: '10', text: 'Others', value: '')
     ]);
-   // deleteFile();
+    // deleteFile();
   }
 
   // void deleteFile() async {

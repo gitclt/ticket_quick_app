@@ -77,6 +77,7 @@ class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
                               color: Colors.white, fontWeight: FontWeight.w600),
                           TextButton(
                               onPressed: () async {
+                              //  await SQLHelper.deleteExpensesTable();
                                 List<Map<String, dynamic>> result = [];
                                 for (var model
                                     in endshiftController.enteredValues) {
@@ -86,11 +87,8 @@ class _EndShiftExpenseDialogState extends State<EndShiftExpenseDialog>
                                     'value': model.value,
                                   });
 
-                                  await SQLHelper.deleteItem(
-                                      endshiftController.enteredValues);
-
-                                  // await SQLHelper.createItem(
-                                  //     model.id, model.text, model.value);
+                                  await SQLHelper.createItem(
+                                      model.id, model.text, model.value);
                                 }
 
                                 Get.back(result: result);

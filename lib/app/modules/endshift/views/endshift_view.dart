@@ -33,7 +33,7 @@ class EndshiftView extends GetView<EndshiftController> {
               tittle: 'Sync',
               path: "assets/image/svg/sync.svg",
               onTap: () async {
-               // SQLHelper.deleteDatabaseFile();
+               
                 dynamic result = await showDialog(
                     context: context,
                     builder: (_) {

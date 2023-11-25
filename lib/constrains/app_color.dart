@@ -12,11 +12,11 @@ const homeYellowColor = LinearGradient(
 const reportcolor1 = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    colors: [Color(0xff97E47C), Color(0xff2AA200)]);
+    colors: [Color(0xffFFADAD), Color(0xffff7676)]);
 const reportcolor2 = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
-    colors: [Color(0xffEBC76B), Color(0xffB28000)]);
+    colors: [Color(0xfffce38a), Color(0xfff38181)]);
 const tripcolor = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,

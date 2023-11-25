@@ -23,7 +23,7 @@ class ShiftReportView extends GetView<EndshiftController> {
                     itemCount: controller.reportList.length,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      const evenColor = tripcolor;
+                      const evenColor = reportcolor1;
                       const oddColor = reportcolor2;
 
                       return Container(

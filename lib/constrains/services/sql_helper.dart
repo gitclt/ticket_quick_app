@@ -1,6 +1,5 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:ticket_quick_app/app/models/end_shift_model.dart';
 
 class SQLHelper {
   static Database? _database;
@@ -23,6 +22,12 @@ class SQLHelper {
     expenseType TEXT,
     expenseValue TEXT) """);
     });
+  }
+
+   static Future<void> deleteExpensesTable() async {
+    Database db = await initDatabase();
+    await db.execute("DROP TABLE IF EXISTS expenses");
+    await initDatabase(); // Reinitialize the database after deleting the table
   }
 
   // static Future<void> createTable(sql.Database database) async {
@@ -54,26 +59,32 @@ class SQLHelper {
     _database = null;
   }
 
+  static Future<void> closeDB() async {
+    if (_database != null) {
+      await _database!.close();
+    }
+  }
+
   static Future<List<Map<String, dynamic>>> getItems() async {
     final db = await database;
     return db.query('expenses', orderBy: 'id');
   }
 
-  static Future<void> deleteItem(List<EndShiftModel> expense) async {
-    final db = await database;
+  // static Future<void> createItem(List<EndShiftModel> expense) async {
+  //   final db = await database;
 
-    await db.delete("expenses");
+  //   await db.delete('expenses');
 
-    for (var value in expense) {
-      final data = {
-        'busId': value.id,
-        'expenseType': value.text,
-        'expenseValue': value.value
-      };
-      await db.insert('expenses', data,
-          conflictAlgorithm: ConflictAlgorithm.replace);
-    }
-  }
+  //   for (var value in expense) {
+  //     final data = {
+  //       'busId': value.id,
+  //       'expenseType': value.text,
+  //       'expenseValue': value.value
+  //     };
+  //     await db.insert('expenses', data,
+  //         conflictAlgorithm: ConflictAlgorithm.replace);
+  //   }
+  // }
 
   // static Future<void> deleteDatabaseFile() async {
   //   // Get the path to the database file
